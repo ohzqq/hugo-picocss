@@ -4,3 +4,8 @@ title: My New Hugo Project
 
 theme: 
 - picocss
+
+params:
+  picocss:
+    layout: container-fluid
+    color: amber
