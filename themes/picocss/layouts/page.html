@@ -1,8 +1,17 @@
 {{ define "main" }}
+<<<<<<< HEAD
 
 {{ partial "page_header.html" . }}
 
   <h1>{{ .Title }}</h1>
 
+=======
+  {{if .Site.Params.picocss.breadcrumbs}}
+      {{ partial "breadcrumbs.html" .}}
+  {{end}}
+
+  <h1>{{ .Title }}</h1>
+
+>>>>>>> c4a54df (ok)
   {{ .Content }}
 {{ end }}
