@@ -1,6 +1,12 @@
   <h1 data-pagefind-body>{{ .Title }}</h1>
-{{if .Site.Params.dotLottie.breadcrumbs}}
+{{if .Site.Params.picocss.breadcrumbs}}
     {{ partial "breadcrumbs.html" .}}
 {{end}}
-{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-
+{{$page := .}}
+<nav> 
+  <ul> 
+{{range $name, $tax := .Site.Taxonomies}}
+  {{ partial "terms.html" (dict "taxonomy" $name "page" $page) }}
+{{end}}
+  </ul> 
+</nav> 
