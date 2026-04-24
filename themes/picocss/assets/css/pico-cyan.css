@@ -1,0 +1,37 @@
+/**
+ * Color schemes
+ */
+[data-theme=light],
+:root:not([data-theme=dark]),
+:host(:not([data-theme=dark])) {
+  color-scheme: light;
+  --pico-text-selection-color: #E7EAEF;
+  --pico-primary: #047878;
+  --pico-primary-background: #047878;
+ --pico-primary-underline: #047878;
+  --pico-primary-hover: #025d5d;
+  --pico-primary-hover-background: #046a6a;
+  --pico-primary-focus: #05A2A2;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host(:not([data-theme])) {
+    --pico-text-selection-color: rgba(10, 177, 177, 0.1875);
+    --pico-primary: #0ab1b1;
+    --pico-primary-background: #047878;
+    --pico-primary-underline: rgba(10, 177, 177, 0.5);
+    --pico-primary-hover: #0ccece;
+    --pico-primary-hover-background: #058686;
+    --pico-primary-focus: rgba(10, 177, 177, 0.375);
+}
+
+[data-theme=dark] {
+  color-scheme: dark;
+  --pico-text-selection-color: rgba(10, 177, 177, 0.1875);
+  --pico-primary: #0ab1b1;
+  --pico-primary-background: #047878;
+  --pico-primary-underline: rgba(10, 177, 177, 0.5);
+  --pico-primary-hover: #0ccece;
+  --pico-primary-hover-background: #058686;
+  --pico-primary-focus: rgba(10, 177, 177, 0.375);
+}
