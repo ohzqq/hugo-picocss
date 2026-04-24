@@ -13,3 +13,11 @@ Initialize your site as hugo module:
 Add hugo-picocss module as a dependency of your site:
 
     $ hugo mod get github.com/ohzqq/hugo-picocss
+
+## Configuration
+
+params:
+  picocss:
+    layout: container-fluid
+    breadcrumbs: true
+    color: amber
