@@ -13,6 +13,12 @@ title = 'My New Hugo Project'
     pageRef = '/tags'
     weight = 30
 
+[params]
+  [params.picoss]
+		layout = 'container-fluid'
+		color = 'amber'
+		breadcrumbs = true
+
 [module]
   [module.hugoVersion]
     extended = false
