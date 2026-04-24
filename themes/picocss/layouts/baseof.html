@@ -4,6 +4,7 @@
   {{ partial "head.html" . }}
 </head>
 <body>
+  <div class="{{.Site.Params.picocss.layout}}"> 
   <header>
     {{ partial "header.html" . }}
   </header>
@@ -13,5 +14,6 @@
   <footer>
     {{ partial "footer.html" . }}
   </footer>
+  </div>
 </body>
 </html>

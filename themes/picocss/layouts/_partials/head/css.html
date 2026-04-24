@@ -1,4 +1,16 @@
-{{- with resources.Get "css/main.css" }}
+{{- with resources.Get "css/pico.css" }}
+  {{- if hugo.IsDevelopment }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{$color := "amber"}}
+{{with .Site.Params.picocss.color}}{{$color = .}}{{end}}
+{{$theme := fmt.Print "css/pico-" $color ".css"}}
+{{- with resources.Get $theme }}
   {{- if hugo.IsDevelopment }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}
